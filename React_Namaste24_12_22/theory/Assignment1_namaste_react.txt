@@ -1,0 +1,113 @@
+1.   what is emmet ? why is it used ?
+A :  Emmet is a plugin that is used to auto-complete a code .
+     It is available by defalt in VS code for HTML and CSS ,
+     It increases the speed of typing in HTML ,with just a simple expression,
+     we can implement a large code block 
+     but we must perform some configuration for doing it in React .
+     This Plugin will increase the productivity among the React developers.
+
+
+2.   Difference between Library and framework :
+A:   Definition : 
+       Library : Libraries provide the developers with the predefined functions 
+                 and classses to make their work easier and boost the development
+                 process.
+      Framework: Its a foundation on whihc developers build 
+                 apps for specific platforms.
+ 
+     Inversion of Control :
+       Library : here the developers controls the flow of application and the 
+                 developer will call the library .
+      Framework : Here the control is inverted, the framework
+                  controls the flow of application and calls your code 
+
+
+     Collection :
+       Library : Library consists of collection of helper modules, object
+                 classes, functions,message templates , pre written code ,etc
+      Famework : Generates new code for developers . These codes cant be altered or modifed later
+                 Frameworks dont allow to alter their pre written there it wont deleted /modified .
+    Scope: 
+      Library : we can call the library whenever we want / whenever we see a fit in our code .
+      Framwork : we can call and use what belongs to the framework within the same framework
+
+    Complexity : 
+      Library : whenever library is used we should the functionality of every method which is used , and its
+                not easy to create the complex interactions since we should call many methods to get the desired results 
+
+    Framework : Frameworks will embody the correct basic flow and its easy to do the correct modification at the right places 
+
+
+   Replacibility:
+      Library : if we want to replace the library at any time we can do it (For instance, if you do not like the jQuery date 
+                picker library, you can use another date picker like a bootstrap date picker or pick date.)
+    Framework : Frameworks are not easy to replace suppose if we are using the angular js we cant switch over to react js we should
+                switch the entire codebase.
+
+  Performace :
+     Library   : Less code is required to build the libraries , there by faster loading and performace is faster.
+     Framework : developing a framework requires a lot of coding there by increasing the loading time and performance is slower .
+  
+  Usage : 
+     Library : the purpose of the libraries is to perform a defined task and specific task .
+     Framework :It is used to perform a wide range of task , among these are webapp systems,plug in managers, GUI systems etc.
+
+  Existing Projects : 
+     Library : you can integrate the libraries seemlessly into the existing project and add the functionality .
+     Frameworks : we cannot add the frameworks into the existing project , a framework must be used as a new project from the scratch 
+
+  Benefits : 
+     Library : Good code quality, reusability, and control, enhanced speed and performance of the program, etc.
+     Framework : Faster programming, support from the community, great support for MVC (Model View Controller) pattern, etc.
+
+3.  What is CDN? Why do we use it?
+A . A CDN is a content delivery network. It is a system of distributed servers that deliver content to a user based
+    on their geographic location. The benefits of using a CDN in React Js are many. CDNs can improve the performance 
+    of your website by reducing the latency of content delivery and by providing a higher level of availability. 
+    CDNs can also help to improve the security of your website by providing a distributed denial of service (DDoS) protection.
+
+4. Why is React known as React ?
+A. React makes it painless to create the interactive UIs.Design the simple views for each state in your application and react 
+   will efficiently update and render just the right components when your data changes 
+   Declarative code will make it more easy to understand.
+
+
+5. What is cross origin in script tag?
+A. In ReactJS, Cross-Origin Resource Sharing (CORS) refers to the method that allows you to make requests to the server
+   deployed at a different domain. 
+   The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
+   Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+   A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts)
+   from another domain.
+   CORS is used to manage cross-origin requests.
+   CORS stands for Cross-Origin Resource Sharing, and is a mechanism that allows resources on a web page to be requested from
+   another domain outside their own domain.It defines a way of how a browser and server can interact to determine whether 
+   it is safe to allow the cross-origin request. CORS allows servers to 
+   specify who can access the assets on the server, among many other things.
+
+  The opposite of cross-origin requests is same-origin requests. This means that a web page can only interact with other documents 
+  that are also on the same server. This policy enforces that documents that interact with each other must have the same origin (domain).
+
+
+6. What is diference between React and ReactDOM ?
+A : React : Open source JS library , for developing the UI of a web application .Library that defines what a component is and how
+    multiple components work together.
+    React DOM : helps in rendering the React to the web browser . 
+    i.e it glues the react ideas to the web browser / Library that knows how to get a component to show up in the browser.
+
+7.  What is difference between react.development.js and react.production.js files via CDN?
+A:  In development mode, React includes many warnings to help in finding problems before they lead to bugs. Doing so, it increases the bundle
+    size and makes the app run slower. The slowdown may be accepted while working on the app locally but we cannot afford this in deployment.
+    In development mode React, internally, uses several clever techniques to minimize the number of costly DOM operations required to update 
+    UI. In order to  speed up our React application we use  production builds (Its one among the ways to speed up the react application)
+
+    The production build creates minified bundles, lighter-weight source maps, and optimized assets. This improves the load time. React recommends
+    using production mode while deploying the react app. We now know that production build helps in optimizing performance. 
+    
+
+8.  What is async and defer? 
+A:  when the HTML parsing takes place ,the html code is rendered as and when the rendering takes place , if the html encounters 
+    a script tag then the resources are fetched from the network and then the script is executed , then html parsing continues ,
+    in order to avoid the time gap when the script is being , we use something called asyn attribute which will render the script 
+    along with/parallel to the html rendering process , where as in case of defer attribute , the resource inside the script are 
+    fetched from the network along with the html but the execution of script takes place after the entire html is rendered.

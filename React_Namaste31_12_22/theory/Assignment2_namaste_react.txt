@@ -1,0 +1,144 @@
+  1.  What is `NPM`?
+  A:  npm is the world's largest software registry. Open source developers from every continent use npm to share and borrow packages,
+      and many organizations use npm to manage private development as well.
+      npm consists of three distinct components:
+      the website
+      the Command Line Interface (CLI)
+      the registry
+
+      Use the website to discover packages, set up profiles, and manage other aspects of your npm experience.
+      For example, you can set up organizations to manage access to public or private packages.
+
+      The CLI runs from a terminal, and is how most developers interact with npm.
+
+      The registry is a large public database of JavaScript software and the meta-information surrounding it.
+ 2.   What is `Parcel/Webpack`? Why do we need it?
+ A:   At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes
+      your application, it internally builds a dependency graph from one or more entry points and then combines every 
+      module your project needs into one or more bundles, which are static assets to serve your content from.
+      Since version 4.0.0, webpack does not require a configuration file to bundle your project. 
+      Nevertheless, it is incredibly configurable to better fit your needs.
+
+      Parcel is a web application bundler, differentiated by its developer experience. It offers blazing fast performance
+      utilizing multicore processing, and requires zero configuration.Parcel can take any type of file as an entry point, 
+      but an HTML or JavaScript file is a good place to start.
+      Parcel. js is an open-source bundler. It supports many popular languages like Typescript and SASS, 
+      and can also handle file types like images and fonts. Parcel comes with a few extra tools built-in: a development server, 
+      diagnostics, minification, and even image compression.
+
+ 3.   What is `.parcel-cache` ?
+ A:   The .cache folder (or .parcel-cache in parcel v2) stores information about your project when parcel builds it, 
+      so that when it rebuilds, it doesn't have to re-parse and re-analyze everything from scratch. It's a key reason
+      why parcel can be so fast in development mode.  The .cache folder is used by Parcel as a temporary cache directory when
+      building your app for development and production.
+
+ 4.   What is `npx` ?
+ A:   The npx stands for Node Package Execute and it comes with the npm, when you installed npm above 5.2.0 version then automatically 
+      npx will installed.It is an npm package runner that can execute any package that you want from the npm registry without even
+      installing that package. The npx is useful during a single time use package .
+
+ 5.   What is difference between `dependencies` vs `devDependencies`.
+ A:  "dependencies": Packages required by your application in production.
+     "devDependencies": Packages that are only needed for local development and testing.
+      we can directly add dependcies / dev dependencies into package.json file manually 
+      or by using the commands in CLI /terminal.
+      npm install --save-dev <dev dependency name>
+                or
+      npm install - D  <dev dependency name>
+     
+      npm install <dependency name>
+
+ 
+ 6.   What is Tree Shaking?
+ A:   Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
+      It relies on the import and export statements to detect if code modules are exported and imported for use between JavaScript files.
+      In modern JavaScript applications, we use module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple
+      JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures
+      and minimal file size.
+  
+ 7.  What is Hot Module Replacement?
+ A:  By default, Parcel fully reloads the page, but in some cases it may perform Hot Module Replacement (HMR). HMR improves the development experience by updating modules in the browser
+    at runtime without needing a whole page refresh. This means that application state can be retained as you change small things in your code.
+
+ 8.  List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+ A:  *HMR - HOT MODULE REPLACMENT  -   By default, Parcel fully reloads the page, but in some cases it may perform Hot Module Replacement (HMR). HMR improves the development experience by updating modules in the browser
+                                      at runtime without needing a whole page refresh. This means that application state can be retained as you change small things in your code.
+     file watcher algorithm - its wriiten in c++ , 
+    
+     * MINIFICATION - Parcel includes minifiers for JavaScript, CSS, HTML, and SVG out of the box. 
+                   Minification reduces the file size of your output bundles by removing whitespace, renaming variables to shorter names, and many other optimizations.
+                    By default, minification is enabled when using the parcel build command
+     * TREE SHAKING - In production builds, Parcel statically analyzes the imports and exports of each module, and removes everything that isn't used. This is called "tree shaking" or "dead code elimination".
+                     
+     Cleaning our code
+     Dev and Production build
+     Super fast build algorithm
+     caching while development 
+     compression 
+     compatible with older version of web browsers
+     on dev machine
+     consistent hashing algorithm
+     port number 
+     zero config
+     transitive dependency 
+
+  
+ 9.  What is `.gitignore`? What should we add and not add into it?
+ A:  The git ignore file rule allows you to ignore a file you've committed in the past. 
+     You use it when you do not want to recommit a file, for example a build artifact.
+     Including a git ignore file in your repository allows developers on the project to use the file. It also:
+     Improves the “signal to noise ratio” for any Git command.
+     Allows builds to come from one source.
+     Avoids potentially costly commits of files that shouldn’t be versioned.
+     In short, it’s a good practice to develop a git ignore folder for every project. Then you can custom-tailor it
+     depending on the types of files or artifacts that need to be included. You can also choose to define multiple Git ignore
+     files using different directories in your repository. However, the simplest approach is define just
+     one git ignore file in the root. As this git ignore files is checked un, it is versioned just like any other file.
+
+     git ignore must contain the details which can generated on the server machine.
+     Those files which cant be generated on server machine must not be included in the gitignore
+
+ 10. What is the difference between `package.json` and `package-lock.json`
+ A:  Package.json 
+     It contains basic information about the project.
+     It is mandatory for every project
+     It records important metadata about the project.
+     It contains information such as name, description, author, script, and dependencies.
+
+     Package-lock.json
+     It describes the exact tree that was generated to allow subsequent installs to have the identical tree.
+     It is automatically generated for those operations where npm modifies either node_modules tree or package.json.
+     It allows future devs to install the same dependencies in the project.
+     It contains the name, dependencies, and locked version of the project. 
+
+
+ 11. Why should I not modify `package-lock.json`?
+ A:  The `package-lock.json` file was introduced in npm version 5 to solve this problem. 
+     It is a generated file and is not designed to be manually edited. Its purpose is to track the entire tree of dependencies 
+     (including dependencies of dependencies) and the exact version of each dependency.
+     You should commit package-lock.json to your code repository. Sharing this file with teammates and the production environment 
+     is the best way to make sure that everyone has the same configuration for their copy of the project.
+ 
+ 12. What is `node_modules` ? Is it a good idea to push that on git?
+ A:  When you take your Node project and you put it on GitHub, or you're copying it around or sending it to a friend, 
+     the node_modules folder really shouldn't be taken with you.The node_modules folder contains generated code. This is 
+     not code you've written and you should never make any updates to the files inside Node modules because there's a pretty good 
+     chance they'll get overwritten next time you install some modules.There by we should not push on git and the size of the node_modules is very huge (upto some TB maybe)
+     Because node_module contains all the dependency packages needed by your project and also their child packages.
+
+
+ 13. What is the `dist` folder?
+ A:  dist folder is created when parcel creates the build for the application . It contains the HTML and CSS and JS with other files for the build.
+
+
+ 14. What is `browserlists`
+ A:  browserlist is a list brosers that our applicaion should support . It also covers the browser coverage over a geographical area
+
+
+ 15. Read about difers: vite, webpack, parcel
+ 
+ 16. Read about - ^caret and ~tilda
+ A:  
+
+ 17. Read about Script types in html (MDN Docs)
+ A:  

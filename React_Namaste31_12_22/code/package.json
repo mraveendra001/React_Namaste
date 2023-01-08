@@ -1,0 +1,33 @@
+{
+  "name": "namaste_react_31_12",
+  "version": "1.0.0",
+  "description": "this is a react course on 31_12",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mraveendra001/React_Namaste.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Meghana R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mraveendra001/React_Namaste/issues"
+  },
+  "homepage": "https://github.com/mraveendra001/React_Namaste#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0", 
+    "react-dom": "^18.2.0"
+  },
+  "browserlist":[
+    "last 2 versions"
+  ]
+}

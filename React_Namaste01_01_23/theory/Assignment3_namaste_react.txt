@@ -1,0 +1,18 @@
+1. What is JSX ?
+A: JSX stands for JavaScript XML.JSX allows us to write HTML in React.JSX makes it easier to write and add HTML in React.
+   for example :   const myElement = <h1>I Love JSX!</h1>;
+                   const root = ReactDOM.createRoot(document.getElementById('root'));
+                   root.render(myElement);   
+
+2. Superpowers of JSX ?
+A: JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
+   JSX converts HTML tags into react elements. You are not required to use JSX, but JSX makes it easier to write React applications.
+
+3. Role of type attirbute in script tag ? what options can I use  there ?
+A: The type attribute specifies the type of the script. The type attribute identifies the content between the <script> and </script> tags.
+
+4. {TitleComponent}  Vs  {<TitleComponent/>}  Vs  {<TitleComponent></TitleComponent>} in JSX
+A: <TitleComponent><TitleComponent/>   and <TitleComponent/>   mean one and the same .
+
+
+

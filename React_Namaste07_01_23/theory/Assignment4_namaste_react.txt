@@ -1,0 +1,87 @@
+1. Is JSX mandatory for react ?
+A: JSX is not a requirement for using React. Using React without JSX is especially convenient when you don’t want to set up compilation in your build environment.
+   Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
+   The component can either be provided as a string, as a subclass of React.Component, or a plain function.If you get tired of typing React.createElement so much, one common pattern is to assign a shorthand:
+   If you use this shorthand form for React.createElement, it can be almost as convenient to use React without JSX.
+
+2. Is ES6 mandatory for react ?
+A: No ,Its not mandatory 
+
+3. {TitleComponent}  Vs  {<TitleComponent/>}  Vs  {<TitleComponent></TitleComponent>} in JSX
+A: <TitleComponent><TitleComponent/>   and <TitleComponent/>   mean one and the same .
+
+4. How can I write commentsin JSX ?
+A: // or  //**  **/
+
+5. What is <React.Fragment><React.Fragment/>  or <></>   ?
+A: A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM
+   For example : render() {
+                     return (
+                       <React.Fragment>
+                             <ChildA />
+                             <ChildB />
+                             <ChildC />
+                      </React.Fragment>
+                            );
+                          }
+
+  There is also a new short syntax for declaring them.
+  Those are referred to as Empty tags . Usage of empty tag is depicted below 
+  For example : render() {
+                     return (
+                       <>
+                             <ChildA />
+                             <ChildB />
+                             <ChildC />
+                      </>
+                            );
+                          }
+  
+6. what is virtual DOM ?
+A: Representation of real DOM .When we render an application user interface, 
+   React creates a virtual DOM tree representing that UI and keeps it in memory. 
+   On the next update — in other words, when the data that renders the app changes — React will automatically create a new virtual DOM tree for the update.
+
+7. what is Reconcialiation in react ?
+A: When we render an application user interface, React creates a virtual DOM tree representing that UI and keeps it in memory. On the next update — in other words, 
+   when the data that renders the app changes — React will automatically create a new virtual DOM tree for the update.After React creates the new virtual DOM tree, 
+   it compares it to the previous snapshot using a diffing algorithm to figure out what changes are necessary. This process is called reconciliation.
+
+8. What is React Fiber ?
+A: React Fiber is a concept of ReactJS that is used to render a system faster and smoother. React is one of the popular JavaScript library used to create a  
+   responsive user interface. React makes coding simple as compared to other frameworks. After certain changes 
+   who is the next element to render the system called reconciler. This algorithm helps to compare two DOM trees and diff them. React fiber helps to do it better.
+
+9. Why do we need keys in React ?
+A: whenever react is updating the dom ,with many sibling then you add one more child then react 
+   must re render everything ,but if we give unique keys to then the react will do less work,
+   by just rendering the new child with a new key comparing with the existing key. 
+
+10. Can we use index as keys in React ?
+A:  Yes we can use indexs keys in React but its not recommended to use indexes for keys if the order of items may change. This can negatively impact
+    performance and may cause issues with component state. 
+    If you choose not to assign an explicit key to list items then React will default to using indexes as keys.
+
+11. What is props in React ? Ways to
+A:  React Props are like function arguments in JavaScript and attributes in HTML.
+    To send props into a component, use the same syntax as HTML attributes:
+
+    Add a "brand" attribute to the Car element:
+    const myElement = <Car brand="Ford" />;
+
+    The component receives the argument as a props object:
+    Use the brand attribute in the component:
+
+   function Car(props) {
+        return <h1>I am a {props.brand}!</h1>;
+                       }
+
+12. What is config driven UI ?
+A: config driven UI - WHEN WE BUILD A REAL WORLD APPLICATION,
+   WE CANT HAVE DIFFERENT WEBSITE ALL OVER COUNTRY,
+   WE CONTROL UOR CONTENT THROUGH CONFIG DRIVEN UI ,
+   Who is driving this content ? backend , that is api
+   we will build through config only since its a real world example 
+
+
+
